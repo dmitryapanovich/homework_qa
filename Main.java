@@ -6,9 +6,9 @@ public class Main {
         checkSumSign();
         printColor();
         compareNumbers();
-        checkSum(5, 10);
+        System.out.println(checkSum(10, 5));
         oneDigit(7);
-        oneDigitTrueOrFalse(5);
+        System.out.println(oneDigitTrueOrFalse(5));
         stringAndDigit("Hello", 3);
         oneHundred(100);
         massChange();
@@ -34,8 +34,7 @@ public class Main {
         System.out.println("Задание 2");
         int a = 5;
         int b = 7;
-        int sum = a + b;
-        if (sum >= 0) {
+        if (a + b >= 0) {
             System.out.println("Сумма положительная");
         }
         else {
@@ -46,12 +45,12 @@ public class Main {
     private static void printColor() {
 
         System.out.println("Задание 3");
-        int value = 50;
+        int value = 150;
         if (value <= 0) {
             System.out.println("Красный");
         } else if (value > 0 && value <= 100) {
             System.out.println("Желтый");
-        } else if (value > 100) {
+        } else {
             System.out.println("Зеленый");
         }
     }
@@ -66,11 +65,10 @@ public class Main {
             System.out.println("a < b");
         }
     }
-    static void checkSum(int x, int y) {
+    private static boolean checkSum(int a, int b) {
 
         System.out.println("Задание 5");
-        boolean result = (x + y >= 10 && x + y <= 20);
-        System.out.println(result);
+        return a + b >= 10 && a + b <= 20;
     }
 
     private static void oneDigit(int a) {
@@ -79,11 +77,10 @@ public class Main {
         System.out.println(a >= 0? "Positive" : "Negative");
     }
 
-    private static void oneDigitTrueOrFalse(int a) {
+    private static boolean oneDigitTrueOrFalse(int a) {
 
         System.out.println("Задание 7");
-        boolean result = (a <= 0);
-        System.out.println(result);
+        return a <= 0;
     }
 
     private static void stringAndDigit(String line, int n) {
@@ -123,7 +120,7 @@ public class Main {
         int[] arr = new int[len];
         for (int i = 0; i < len; i++) {
             arr[i] = initialValue;
-            System.out.print("[" + i + "]" + arr[i] + " ");
+            System.out.print(arr[i]);
         }
     }
 
