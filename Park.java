@@ -1,6 +1,6 @@
 
 public class Park {
-    public static class Attractions {
+    public class Attractions {
         private String name;
         private String time;
         private int cost;
@@ -17,7 +17,7 @@ public class Park {
         public String getTime() {
             return time;
         }
-        public String getCost() {
+        public int getCost() {
             return cost;
         }
     }
