@@ -1,7 +1,7 @@
 public class Cat extends Animal {
 
-    private int MAX_RUN = 200;
-    private int MAX_SWIM = 0;
+    private int max_Run = 200;
+    private int max_Swim = 0;
     private static int count;
 
     public Cat(String name, int swims, int run) {
