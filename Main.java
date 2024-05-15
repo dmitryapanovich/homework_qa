@@ -1,6 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
+        
         String[][] arr = new String[][] {
                 {"1", "2", "3", "4"},
                 {"5", "6", "7", "8"},
@@ -18,6 +19,7 @@ public class Main {
             System.out.println("Ошибка находится в ячейке: " + e.i + "x" + e.j);
         }
     }
+    
     public static int analysis(String[][] arr)
             throws MyArraySizeException, MyArrayDataException {
         int count = 0;
@@ -37,6 +39,7 @@ public class Main {
                 }
             }
         }
+                
         return count;
     }
 }
