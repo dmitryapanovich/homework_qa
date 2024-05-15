@@ -1,7 +1,7 @@
 public class Dog extends Animal {
 
-    private int MAX_RUN = 500;
-    private int MAX_SWIM = 10;
+    private int max_Run = 500;
+    private int max_Swim = 10;
     private static int count;
 
     public Dog(String name, int swims, int run) {
