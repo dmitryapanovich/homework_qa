@@ -38,8 +38,7 @@ public class Main {
                     throw new MyArrayDataException(i, j);
                 }
             }
-        }
-                
+        }      
         return count;
     }
 }
