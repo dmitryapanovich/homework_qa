@@ -54,7 +54,7 @@ public class Tests {
         WebElement fieldSum = driver.findElement(By.xpath("//*[@id=\"connection-sum\"]"));
         fieldSum.sendKeys("50");
         WebElement fieldEmail = driver.findElement(By.xpath("//*[@id=\"connection-email\"]"));
-        fieldPhone.sendKeys("mts@gmail.com");
+        fieldEmail.sendKeys("mts@gmail.com");
         WebElement buttonContinue = driver.findElement(By.xpath("//*[@id=\"pay-connection\"]/button"));
         buttonContinue.click();
         Thread.sleep(5000);
