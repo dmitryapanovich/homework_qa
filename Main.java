@@ -1,44 +1,26 @@
 public class Main {
+    public static void main(String[] args){
 
-    public static void main(String[] args) {
-        
-        String[][] arr = new String[][] {
-                {"1", "2", "3", "4"},
-                {"5", "6", "7", "8"},
-                {"9", "10", "11", "12"},
-                {"13", "14", "15", "16"}
-        };
-            try {
-                int result = analysis(arr);
-                System.out.println(result);
-            } catch (MyArraySizeException e) {
-                System.out.println("Размер массива превышает допустимое значение.");
-            }
-        catch (MyArrayDataException e) {
-            System.out.println("Введено неправильное значение для массива.");
-            System.out.println("Ошибка находится в ячейке: " + e.i + "x" + e.j);
-        }
-    }
-    
-    public static int analysis(String[][] arr)
-            throws MyArraySizeException, MyArrayDataException {
-        int count = 0;
-        if (arr.length != 4) {
-            throw new MyArraySizeException();
-        }
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i].length != 4) {
-                throw new MyArraySizeException();
-            }
-            for (int j = 0; j < arr[i].length; j++) {
-                try {
-                    count = count + Integer.parseInt(arr[i][j]);
-                }
-                catch (NumberFormatException e) {
-                    throw new MyArrayDataException(i, j);
-                }
-            }
-        }      
-        return count;
+        Phonebook phonebook = new Phonebook();
+        phonebook.add("Petrov", "375297505050");
+        phonebook.add("Ivanov", "375297505051");
+        phonebook.add("Sidorov", "375297505052");
+        phonebook.add("Dadonov", "375297505053");
+        phonebook.add("Ivanov", "375297505054");
+
+        System.out.println("Getting the numbers");
+        System.out.println("Petrov");
+        System.out.println(phonebook.get("Petrov"));
+        System.out.println("Ivanov");
+        System.out.println(phonebook.get("Ivanov"));
+        System.out.println("Sokolov");
+        System.out.println(phonebook.get("Sokolov"));
+
+        System.out.println("No records");
+        System.out.println("Izmailov");
+        System.out.println(phonebook.get("Izmailov"));
+
+        System.out.println("Add new number");
+        phonebook.add("Danilov", "375297505055");
     }
 }
