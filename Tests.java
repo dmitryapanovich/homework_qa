@@ -104,8 +104,8 @@ public class Tests {
         WebElement buttonContinue = driver.findElement(By.xpath("//*[@id=\"pay-connection\"]/button"));
         buttonContinue.click();
     //    К сожалению не получается добавить явное ожидание из-за ошибки java: incompatible types: int cannot be converted to java.time.Duration
-    //    WebElement modalWindow = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("modalWindow")));
-    //    WebElement sumText = modalWindow.findElement(By.id("sumText"));
+    //    WebElement modalWindow = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.bepaid-app iframe")));
+    //    WebElement sumText = modalWindow.findElement(By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/div/div/span[1]"));
         Thread.sleep(5000);
         Assert.assertTrue(driver.findElement(By.cssSelector("div.bepaid-app iframe")).isDisplayed());
       //  WebElement sumText = driver.findElement(By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/div/div/span[1]"));
