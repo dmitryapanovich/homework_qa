@@ -110,12 +110,8 @@ public class Tests {
         Assert.assertTrue(driver.findElement(By.cssSelector("div.bepaid-app iframe")).isDisplayed());
       //  WebElement sumText = driver.findElement(By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/div/div/span[1]"));
       //  assertEquals(sumText.getText(), "10", "Неверная сумма отображена");
-
-
       //  WebElement payButton = driver.findElement(By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/app-card-page/div/div[1]/button"));
       //  assertEquals(payButton.getText(), "Оплатить  10.00 BYN", "Неверный сумма отображена на кнопке");
-
-
      //   WebElement phoneNumberLabel = driver.findElement(By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/div/span"));
      //   assertEquals(phoneNumberLabel.getText(), "Оплата: Услуги связи Номер:375297777777", "Неверный номер отображен");
     }
